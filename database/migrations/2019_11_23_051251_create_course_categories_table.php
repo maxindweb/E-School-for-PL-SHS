@@ -13,10 +13,12 @@ class CreateCourseCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('course-categories', function (Blueprint $table) {
+        Schema::create('course_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('category_name');
+            $table->string('course_name');
             $table->string('image');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('group_id');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateCourseCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course-categories');
+        Schema::dropIfExists('course_categories');
     }
 }
