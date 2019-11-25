@@ -15,6 +15,8 @@ class CreateQuizzesTable extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('quiz_name');
+            $table->unsignedInteger('course_category');
             $table->timestamps();
         });
     }
