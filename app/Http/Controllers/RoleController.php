@@ -28,11 +28,23 @@ class RoleController extends Controller
 
     public function update(Request $request, Role $role)
     {
-        // 
+        $data = $role->update([
+            'role' => $request->role
+        ]);
+
+        return response()->json([
+            'status' => $data,
+            'message' => $data ? 'Role Updated' : 'Error Updating Role'
+        ]);
     }
 
-    public function destroy()
+    public function destroy(Role $role)
     {
-        // 
+        $status = $role->delete();
+
+        return response()->json([
+            'status' => $status,
+            'message' => $status ? 'Role Deleted' : 'Error Deleting Role'
+        ]);
     }
 }

@@ -15,4 +15,9 @@ class QuestionChoice extends Model
     {
         return $this->belongsTo(Question::class);
     }
+
+    public function Score()
+    {
+        return $this->belongsTo(Score::class);
+    }
 }

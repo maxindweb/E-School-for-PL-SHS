@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChatsTable extends Migration
+class CreateBookLoansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateChatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('chats', function (Blueprint $table) {
+        Schema::create('book_loans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('message');
-            $table->string('file');
-            $table->unsignedInteger('room_chat_id');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateChatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chats');
+        Schema::dropIfExists('book_loans');
     }
 }

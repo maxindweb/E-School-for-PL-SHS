@@ -62,6 +62,7 @@ class UserController extends Controller
         $status = User::find($user);
         $status->name = $response['name'];
         $status->email= $response['email'];
+        $status->group_id=$response['group_id'];
         $status->update();
 
         return response()->json([

@@ -3,28 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Quiz;
-use App\User;
-use App\Course;
 
-class QuizController extends Controller
+class CarouselController extends Controller
 {
     public function index()
     {
         //
     }
 
-    public function allActive()
+    public function show()
     {
         //
     }
 
-    public function all()
+    public function uploadImage()
     {
         //
     }
 
-    public function store()
+    public function destroy()
     {
         //
     }

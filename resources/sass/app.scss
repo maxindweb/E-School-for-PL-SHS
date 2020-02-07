@@ -1,5 +1,8 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons");
-@import url("https://fonts.googleapis.com/css?family=Manjari&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
-@import '~vuetify/dist/vuetify.min.css';
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';

@@ -4,20 +4,23 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChatsTable extends Migration
+class CreateBooksTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up()   
     {
-        Schema::create('chats', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('message');
-            $table->string('file');
-            $table->unsignedInteger('room_chat_id');
+            $table->string('title');
+            $table->string('writer');
+            $table->string('image');
+            $table->string('publisher');
+            $table->string('category_id');
+            $table->boolean('loan')->default(null);
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateChatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chats');
+        Schema::dropIfExists('books');
     }
 }
