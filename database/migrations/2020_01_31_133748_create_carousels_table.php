@@ -16,6 +16,7 @@ class CreateCarouselsTable extends Migration
         Schema::create('carousels', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            
             $table->timestamps();
         });
     }

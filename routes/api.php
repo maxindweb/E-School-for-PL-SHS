@@ -17,6 +17,16 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+//users Api
+Route::post('/users/:user', 'UserController@login');
+Route::post('/register', 'UserController@store');
+
+//Roles Api
+
+
+//Group Api
+
+
 // courses Api
 
 Route::get('/Course', 'CourseController@index');
@@ -26,3 +36,10 @@ Route::post('/course', 'CourseController@store');
 
 Route::get('/Assigment', 'AssigmentController@indexNull');
 Route::get('/assigment/:assigment', 'AssigmentController@show');
+Route::post('/assigment', 'AssigmentController@store');
+
+
+//Quiz Api
+
+
+//

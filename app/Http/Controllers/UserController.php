@@ -52,7 +52,7 @@ class UserController extends Controller
         return response()->json($response, $status);
     }
 
-    public function show(User $user)
+    public function show($user)
     {
         return response()->json($user, 200);
     }
